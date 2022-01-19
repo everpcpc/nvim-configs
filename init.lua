@@ -8,3 +8,4 @@ require('zephyr')
 -- plugins
 require('plugin-config/nvim-tree')
 require('plugin-config/nvim-treesitter')
+require('plugin-config/bufferline')
