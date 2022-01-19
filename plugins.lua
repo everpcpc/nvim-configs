@@ -4,6 +4,10 @@ return require('packer').startup(function()
 
   -- themes
   use 'glepnir/zephyr-nvim'
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
 
   -- nvim-tree
   use {
