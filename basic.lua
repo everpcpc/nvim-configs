@@ -7,8 +7,9 @@ vim.o.sidescrolloff = 8
 -- 使用相对行号
 vim.wo.number = true
 vim.wo.relativenumber = true
--- 高亮所在行
+-- 高亮所在行/列
 vim.wo.cursorline = true
+vim.wo.cursorcolumn = true
 -- 显示左侧图标指示列
 vim.wo.signcolumn = "yes"
 -- 右侧参考线，超过表示代码太长了，考虑换行
@@ -79,4 +80,6 @@ vim.o.pumheight = 10
 -- always show tabline
 vim.o.showtabline = 2
 
+-- history 存储容量
+vim.o.history = 2000
 
