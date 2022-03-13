@@ -8,7 +8,7 @@ require'nvim-tree'.setup {
   view = {
     mapping = {
       list = {
-        { key = "<C-s>", action = "split" }
+        { key = "<C-v>", action = "vsplit" }
       }
     }
   }

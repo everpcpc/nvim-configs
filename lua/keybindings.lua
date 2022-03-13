@@ -14,6 +14,10 @@ local opt = {
 -- map("i", "<C-h>", "<ESC>I", opt)
 -- map("i", "<C-l>", "<ESC>A", opt)
 
+-- Go to home and end using capitalized directions
+map("n", "H", "^", opt)
+map("n", "L", "$", opt)
+
 -- ctrl u / ctrl + d  只移动9行，默认移动半屏
 map("n", "<C-u>", "9k", opt)
 map("n", "<C-d>", "9j", opt)
@@ -44,10 +48,10 @@ map("n", "sj", ":resize +10<CR>", opt)
 map("n", "sk", ":resize -10<CR>", opt)
 
 -- ctrl + hjkl  窗口之间跳转
-map("n", "<A-h>", "<C-w>h", opt)
-map("n", "<A-j>", "<C-w>j", opt)
-map("n", "<A-k>", "<C-w>k", opt)
-map("n", "<A-l>", "<C-w>l", opt)
+map("n", "<C-h>", "<C-w>h", opt)
+map("n", "<C-j>", "<C-w>j", opt)
+map("n", "<C-k>", "<C-w>k", opt)
+map("n", "<C-l>", "<C-w>l", opt)
 
 --------------------------------------------------------------------
 -- 插件快捷键
@@ -55,9 +59,9 @@ map("n", "<A-l>", "<C-w>l", opt)
 map('n', '<A-m>', ':NvimTreeToggle<CR>', opt)
 
 -- bufferline 左右Tab切换
-map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
-map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
-map("n", "<C-w>", ":bd<CR>", opt)
+map("n", "<A-h>", ":BufferLineCyclePrev<CR>", opt)
+map("n", "<A-l>", ":BufferLineCycleNext<CR>", opt)
+map("n", "<A-w>", ":bd<CR>", opt)
 
 -- nvim-treesitter 代码格式化
 map("n", "<leader>i", "gg=G", opt)
