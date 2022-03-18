@@ -9,8 +9,6 @@ return require('packer').startup(function()
 
   use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
 
-  use 'ray-x/go.nvim'
-
   use 'wakatime/vim-wakatime'
 
   -- nvim-cmp
