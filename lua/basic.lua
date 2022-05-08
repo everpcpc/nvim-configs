@@ -83,3 +83,8 @@ vim.o.showtabline = 2
 -- history 存储容量
 vim.o.history = 2000
 
+-- colorscheme
+vim.g.tokyonight_style = "night"
+vim.g.tokyonight_italic_functions = true
+vim.g.tokyonight_sidebars = { "qf", "vista_kind", "terminal", "packer" }
+vim.cmd[[colorscheme tokyonight]]

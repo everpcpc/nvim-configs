@@ -1,13 +1,18 @@
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
-  use 'glepnir/zephyr-nvim'
+  -- use 'glepnir/zephyr-nvim'
+  use 'folke/tokyonight.nvim'
+  -- use "projekt0n/github-nvim-theme"
+  use 'kyazdani42/nvim-web-devicons'
+
+  use 'ntpeters/vim-better-whitespace'
 
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
-  use {'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons'}
+  use 'kyazdani42/nvim-tree.lua'
 
-  use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
+  use {'akinsho/bufferline.nvim', tag = "v2.*"}
 
   use 'wakatime/vim-wakatime'
 
@@ -23,5 +28,8 @@ return require('packer').startup(function()
   use 'rafamadriz/friendly-snippets'
   -- lspkind
   use 'onsails/lspkind-nvim'
+
+  use 'neovim/nvim-lspconfig'
+  use 'ray-x/lsp_signature.nvim'
 
 end)
