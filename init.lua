@@ -5,6 +5,7 @@ require('keybindings')
 -- theme
 -- require('plugin-config/github-theme')
 -- require('zephyr')
+vim.cmd[[colorscheme tokyonight]]
 
 -- plugins
 require('plugin-config/nvim-tree')
