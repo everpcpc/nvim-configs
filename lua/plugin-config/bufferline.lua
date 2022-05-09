@@ -1,4 +1,6 @@
-require("bufferline").setup {
+local bufferline = require('bufferline')
+
+bufferline.setup {
   options = {
     -- 使用 nvim 内置lsp
     diagnostics = "nvim_lsp",
