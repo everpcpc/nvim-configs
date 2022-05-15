@@ -17,6 +17,8 @@ return require('packer').startup(function()
 
   use 'wakatime/vim-wakatime'
 
+  use 'yamatsum/nvim-cursorline'
+
   -- nvim-cmp
   use 'hrsh7th/cmp-nvim-lsp' -- { name = nvim_lsp }
   use 'hrsh7th/cmp-buffer'   -- { name = 'buffer' },
