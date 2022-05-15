@@ -8,10 +8,9 @@ return require("packer").startup(function()
 
   use "ntpeters/vim-better-whitespace"
 
-  use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
-
   use "kyazdani42/nvim-tree.lua"
 
+  use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
   use { "akinsho/bufferline.nvim", tag = "v2.*" }
   use { "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } }
 

@@ -9,11 +9,6 @@ local opt = {
   silent = true,
 }
 
--- map("n", "<C-j>", "4j", opt)
--- map("n", "<C-k>", "4k", opt)
--- map("i", "<C-h>", "<ESC>I", opt)
--- map("i", "<C-l>", "<ESC>A", opt)
-
 -- Go to home and end using capitalized directions
 map("n", "H", "^", opt)
 map("n", "L", "$", opt)
@@ -71,8 +66,3 @@ map("n", "<C-p>", ":Telescope find_files<CR>", opt)
 -- map("n", "<leader>f", ":Telescope find_files<CR>", opt)
 map("n", "<leader>g", ":Telescope live_grep<CR>", opt)
 
--- local pluginKeys = {}
-
--- -- nvim-cmp 自动补全
-
--- return pluginKeys
