@@ -1,5 +1,5 @@
-local treesitter = require('nvim-treesitter')
-local configs = require('nvim-treesitter.configs')
+local treesitter = require "nvim-treesitter"
+local configs = require "nvim-treesitter.configs"
 
 configs.setup {
   -- One of "all", "maintained" (parsers with maintainers), or a list of languages
@@ -9,7 +9,7 @@ configs.setup {
   sync_install = false,
 
   -- List of parsers to ignore installing
-  ignore_install = { },
+  ignore_install = {},
 
   highlight = {
     -- `false` will disable the whole extension

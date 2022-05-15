@@ -1,6 +1,6 @@
 -- utf8
 vim.g.encoding = "UTF-8"
-vim.o.fileencoding = 'utf-8'
+vim.o.fileencoding = "utf-8"
 -- jk移动时光标下上方保留8行
 vim.o.scrolloff = 8
 vim.o.sidescrolloff = 8
@@ -69,13 +69,22 @@ vim.g.completeopt = "menu,menuone,noselect,noinsert"
 vim.o.background = "dark"
 vim.o.termguicolors = true
 vim.opt.termguicolors = true
--- 不可见字符的显示，这里只把空格显示为一个点
+-- 不可见字符的显示，
 vim.o.list = true
-vim.o.listchars = "space:·,tab:->"
+vim.opt.listchars = {
+  space = "⋅",
+  eol = "↴",
+  tab = "->",
+  trail = "•",
+  extends = "❯",
+  precedes = "❮",
+  nbsp = "_",
+}
+
 -- 补全增强
 vim.o.wildmenu = true
 -- Dont' pass messages to |ins-completin menu|
-vim.o.shortmess = vim.o.shortmess .. 'c'
+vim.o.shortmess = vim.o.shortmess .. "c"
 vim.o.pumheight = 10
 -- always show tabline
 vim.o.showtabline = 2
