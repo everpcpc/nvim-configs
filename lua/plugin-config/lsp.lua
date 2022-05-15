@@ -2,34 +2,6 @@ local lspconfig = require "lspconfig"
 local sig = require "lsp_signature"
 local format = require "lsp-format"
 
-vim.lsp.protocol.CompletionItemKind = {
-  Text = " [text]",
-  Method = " [method]",
-  Function = " [function]",
-  Constructor = " [constructor]",
-  Field = "ﰠ [field]",
-  Variable = " [variable]",
-  Class = " [class]",
-  Interface = " [interface]",
-  Module = " [module]",
-  Property = " [property]",
-  Unit = " [unit]",
-  Value = " [value]",
-  Enum = " [enum]",
-  Keyword = " [key]",
-  Snippet = "﬌ [snippet]",
-  Color = " [color]",
-  File = " [file]",
-  Reference = " [reference]",
-  Folder = " [folder]",
-  EnumMember = " [enum member]",
-  Constant = " [constant]",
-  Struct = " [struct]",
-  Event = "⌘ [event]",
-  Operator = " [operator]",
-  TypeParameter = " [type]",
-}
-
 sig.setup {
   bind = true, -- This is mandatory, otherwise border config won't get registered.
   handler_opts = {

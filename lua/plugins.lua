@@ -19,6 +19,8 @@ return require("packer").startup(function()
 
   use "yamatsum/nvim-cursorline"
 
+  use "terrortylor/nvim-comment"
+
   -- nvim-cmp
   use "hrsh7th/cmp-nvim-lsp" -- { name = nvim_lsp }
   use "hrsh7th/cmp-buffer" -- { name = 'buffer' },
