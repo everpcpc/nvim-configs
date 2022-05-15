@@ -8,6 +8,7 @@
 * python: [`pyright`](https://github.com/microsoft/pyright)
 * go: [`gopls`](https://github.com/golang/tools/tree/master/gopls)
 * rust: [`rust_analyzer`](https://github.com/rust-lang/rust-analyzer)
+* yaml: [`yaml-language-server`](https://github.com/redhat-developer/yaml-language-server)
 * efm: [`efm-langserver`](https://github.com/mattn/efm-langserver)
 
 ### code formater

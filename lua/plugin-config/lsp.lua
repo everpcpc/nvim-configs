@@ -67,6 +67,19 @@ for _, lsp in pairs(servers) do
   }
 end
 
+lspconfig.yamlls.setup {
+  settings = {
+    yaml = {
+      format = {
+        enable = true,
+      },
+      hover = true,
+      validate = true,
+      completion = true,
+    },
+  }
+}
+
 local gen_fmt = function(cmds)
   cfg = {}
   for _, cmd in pairs(cmds) do
