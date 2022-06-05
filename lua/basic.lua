@@ -72,7 +72,7 @@ vim.opt.termguicolors = true
 -- 不可见字符的显示，
 vim.o.list = true
 vim.opt.listchars = {
-  space = "⋅",
+  -- space = "⋅",
   -- eol = "↴",
   tab = "->",
   trail = "•",
