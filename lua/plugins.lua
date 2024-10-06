@@ -10,8 +10,9 @@ return require("packer").startup(function()
 
   use "kyazdani42/nvim-tree.lua"
 
+  use "akinsho/bufferline.nvim"
+
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
-  use { "akinsho/bufferline.nvim", tag = "v2.*" }
   use { "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } }
 
   use "wakatime/vim-wakatime"
