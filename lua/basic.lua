@@ -81,6 +81,12 @@ vim.opt.listchars = {
   nbsp = "_",
 }
 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- enable 24-bit color
+vim.opt.termguicolors = true
+
 -- 补全增强
 vim.o.wildmenu = true
 -- Dont' pass messages to |ins-completin menu|

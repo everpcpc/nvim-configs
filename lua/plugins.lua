@@ -8,7 +8,8 @@ return require("packer").startup(function()
 
   use "ntpeters/vim-better-whitespace"
 
-  use "kyazdani42/nvim-tree.lua"
+  use "nvim-tree/nvim-tree.lua"
+  use "nvim-tree/nvim-web-devicons"
 
   use "akinsho/bufferline.nvim"
 
