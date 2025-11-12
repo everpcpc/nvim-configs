@@ -1,4 +1,3 @@
-local lspconfig = require "lspconfig"
 local sig = require "lsp_signature"
 local format = require "lsp-format"
 
@@ -53,21 +52,25 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 end
 
--- Use a loop to conveniently call 'setup' on multiple servers and
--- map buffer local keybindings when the language server attaches
+-- Configure LSP servers using the new vim.lsp.config API (Neovim 0.11+)
 local servers = { "pyright", "rust_analyzer", "gopls" }
 
 for _, lsp in pairs(servers) do
-  lspconfig[lsp].setup {
+  vim.lsp.config[lsp] = {
+    cmd = { lsp },
+    root_markers = { '.git' },
     on_attach = on_attach,
     flags = {
-      -- This will be the default in neovim 0.7+
       debounce_text_changes = 150,
     },
   }
+  vim.lsp.enable(lsp)
 end
 
-lspconfig.yamlls.setup {
+-- Configure yamlls
+vim.lsp.config.yamlls = {
+  cmd = { 'yamlls' },
+  root_markers = { '.git' },
   settings = {
     yaml = {
       format = {
@@ -79,7 +82,9 @@ lspconfig.yamlls.setup {
     },
   }
 }
+vim.lsp.enable('yamlls')
 
+-- Configure efm
 local gen_fmt = function(cmds)
   cfg = {}
   for _, cmd in pairs(cmds) do
@@ -91,7 +96,9 @@ local gen_fmt = function(cmds)
   return cfg
 end
 
-lspconfig.efm.setup {
+vim.lsp.config.efm = {
+  cmd = { 'efm-langserver' },
+  root_markers = { '.git' },
   on_attach = on_attach,
   init_options = { documentFormatting = true },
   settings = {
@@ -102,3 +109,4 @@ lspconfig.efm.setup {
     },
   },
 }
+vim.lsp.enable('efm')
