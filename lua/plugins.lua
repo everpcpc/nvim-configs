@@ -39,5 +39,5 @@ return require("packer").startup(function()
   use "ray-x/lsp_signature.nvim"
   use "lukas-reineke/lsp-format.nvim"
 
-  use "github/copilot.vim"
+  -- use "github/copilot.vim"
 end)
