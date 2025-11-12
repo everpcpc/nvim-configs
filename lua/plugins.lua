@@ -4,7 +4,7 @@ return require("packer").startup(function()
   -- use 'glepnir/zephyr-nvim'
   use "folke/tokyonight.nvim"
   -- use "projekt0n/github-nvim-theme"
-  use "kyazdani42/nvim-web-devicons"
+  -- use "kyazdani42/nvim-web-devicons"
 
   use "ntpeters/vim-better-whitespace"
 
